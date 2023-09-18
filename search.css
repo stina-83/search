@@ -1,0 +1,77 @@
+/* universal selector - font style */
+* {                
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;                                                   
+}
+
+/* navigation bar style */
+.nbar {    
+    height: 60px;  
+    padding: 5px;                
+    text-align: right;   
+}  
+
+.nbar > a {
+    display: inline-block; 
+    padding: 5px;
+    margin: 5px;
+    font-size: 13px;
+}
+
+.nbar > a:link, a:visited {  
+    color: black;
+    text-decoration: none;   /* remove the underline of default link */          
+}
+
+/* add the underline when hover the link */
+.nbar > a:hover {
+    text-decoration: underline;                
+}
+
+/* form style */
+.cfrm {
+    height: 300px;
+    margin: auto;
+    margin-top: 110px;
+    padding: 5px;
+    text-align: center;
+}    
+
+.cfrm input[type=text] { 
+    display: block;                           
+    width: 580px;             
+    margin: auto;          
+    padding: 15px 30px;    
+    border: 1px solid lightgray;
+    border-radius: 35px; 
+    font-size: 16px;      
+}
+
+.cfrm input[type=text]:hover {
+    box-shadow: 2px 1px 5px 1px lightgrey;
+}
+
+.cfrm input[type=text]:focus {
+    outline: none; /*to delete border default when focus */
+}
+
+.cfrm input[type=submit] {
+    display: inline-block;                
+    margin: 25px 10px;
+    padding:8px 12px;
+    font-size: 14px;
+    color: rgb(23, 14, 14);
+    background-color: white;
+    border: 0px;
+    cursor: pointer; 
+}
+
+.cfrm input[type=submit]:hover {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.cfrm input[type=submit]:focus {
+    border: 1px solid rgb(0, 140, 255);
+    border-radius: 4px;
+}
