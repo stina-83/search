@@ -1,7 +1,8 @@
+
 /* universal selector - font style */
 * {                
     box-sizing: border-box; 
-    font-family: Arial, sans-serif;                                                   
+    font-family: Arial, sans-serif;            
 }
 
 /* navigation bar style */
@@ -41,7 +42,10 @@
     display: block;                           
     width: 580px;             
     margin: auto;          
-    padding: 15px 30px;    
+    background-image: url('search_icon.jpeg');
+    background-repeat: no-repeat;
+    background-position: 10px 6px;
+    padding: 15px 30px 15px 40px;      
     border: 1px solid lightgray;
     border-radius: 35px; 
     font-size: 16px;      
@@ -75,3 +79,16 @@
     border: 1px solid rgb(0, 140, 255);
     border-radius: 4px;
 }
+
+/* responsive style of input width */
+@media (min-width: 640px) {                
+    .cfrm input[type=text] { 
+        width: 580px;
+    }
+} 
+@media (max-width: 639px) {
+    .cfrm input[type=text] { 
+        width: 95%;
+    }                
+}
+
