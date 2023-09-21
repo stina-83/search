@@ -1,4 +1,3 @@
-
 /* universal selector - font style */
 * {                
     box-sizing: border-box; 
@@ -6,16 +5,19 @@
 }
 
 /* navigation bar style */
-.nbar {    
+#flx-container { 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
     height: 60px;  
-    padding: 5px;                
-    text-align: right;   
+}
+
+.nbar {   
+    margin: 5px;
+    padding: 10px;
 }  
 
 .nbar > a {
-    display: inline-block; 
-    padding: 5px;
-    margin: 5px;
     font-size: 13px;
 }
 
@@ -29,7 +31,7 @@
     text-decoration: underline;                
 }
 
-/* form style */
+/* form style for google search and image search */
 .cfrm {
     height: 300px;
     margin: auto;
@@ -93,99 +95,83 @@
 }
 
 /* Advanced search style css */
-/* style for label "Advanced Search" */
-#tas {
-    font-size: 18px;    
-    color: rgba(216, 17, 17, 0.992);
-    padding: 20px 30px;
-    margin: 0px;    
-}
-
-/* style for submit "advanced search" */
-#sas {
-    background-color: rgb(108, 184, 232);
-    color: white;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 9px 15px;
-    border-radius: 4px;
-    border: none;   
-    display:block;
-    margin: auto;   
-}
-
-#sas:hover {
-    background-color: rgb(44, 158, 229);
-}
-
-#sas:active {
-    border: 3px double white;  
-}
-
-/* Advanced search style css */
 #das {
-    margin: 20px 0px;
+    height: 55px;
+}
+
+#das > div {
+    margin: 5px;
+    padding: 10px;
 }
 
 /* style for label "Advanced Search" */
 #tas {
-    font-size: 18px;    
+    font-size: 20px;    
     color: rgb(213, 20, 20);
-    padding: 20px 30px;
+    margin: 5px;
+    padding: 15px;
 }
 
-/* style for border line inside the form */
+/* style for border line of the form */
 #frm {
-    margin: 25px 0px;
-    padding: 20px 20px 60px 20px;
+    margin: 10px 0px;
     border-top: 1px solid rgba(237, 230, 230);
     border-bottom: 1px solid rgba(237, 230, 230);
 }
 
 #container {
-    margin: 10px 0px;
+    margin: 30px 0px;
 }
 
 .row {
-    display: block;
+    margin: 5px 0px;
 }
 
-/* font size for find page with... */
-#fpw {
-    font-size: 16px;
-}
-
-.cfpw {
-    display: inline-block;
-    padding: 8px 12px;
-}
-
-/* padding for column-1 */
+/* styling for column-1 */
 .col-1 {
-    font-size: 13px;
-    width: 190px;
+    height: 40px;
+    width: 200px;
+    margin-left: 20px;
     padding: 12px;
     float: left; /* to make column1 and column2 display in one row */
 }
 
-/* padding for column-2 */
-.col-2 {
-    font-size: 14px;
-    padding: 6px;
-    margin-left: 190px;
-    width: 46%;
-    min-width: 240px;
+.col-1 > span {
+    font-size: 16px;
 }
 
-/* style for input text width 570px */
-.col-2 input[type=text] {
+.col-1 > label {
+    font-size: 13px;
+    
+}
+
+/* style for column-2 */
+.col-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-2a {
+    padding: 6px;
+    height: 40px;
+    width: 61%;
+    min-width: 240px;
+    max-width: 580px;
+}
+
+.col-2b {
+    width: 332px;
+}
+
+/* style for input text */
+.col-2a input[type=text] {
     width: 100%;
     border: 1px solid rgba(212, 208, 208, 0.828);
     border-top: 1px solid rgb(200, 194, 194);   
     padding: 6px;
 }
 
-.col-2 input[type=text]:focus {
+.col-2a input[type=text]:focus {
     outline: none;
     border: 1px solid rgb(55, 176, 216);  
 }
@@ -199,7 +185,6 @@
     padding: 9px 15px;
     border-radius: 4px;
     border: none;   
-    display:block;
     float: right;
 }
 
@@ -207,6 +192,32 @@
     background-color: rgb(38, 138, 200);
 }
 
-#sas:active {
+#sas:focus {
     border: 3px double white;  
 }
+
+/* style for note */
+.note {
+    font-size: 11px;    
+    padding: 12px 0px 0px 12px;        
+    color: rgb(21, 20, 20);
+}
+
+.note span {
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+}
+
+#tnote {
+    font-size: 13px;
+    font-weight: bolder;
+    color: rgb(87, 85, 85);
+    padding-left: 0px;
+}
+
+/* responsive style to delete the display of note */
+@media (max-width: 1056px) {
+    .note {
+        display: none; 
+    }
+}       
